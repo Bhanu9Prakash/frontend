@@ -1,0 +1,1 @@
+export const BACKEND_URL = "https://chetana-i8hg.onrender.com"
