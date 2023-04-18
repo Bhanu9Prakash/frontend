@@ -9,7 +9,7 @@ const Past = () => {
     const imageData = new FormData();
     imageData.append("email", email);
     axios
-      .post("https://flask-production-8563.up.railway.app/past-predictions", imageData)
+      .post("https://web-production-de1e.up.railway.app//past-predictions", imageData)
       .then(function (response) {
         setImages(response.data);
       })

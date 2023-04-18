@@ -24,7 +24,7 @@ const Predict = () => {
     const formData = new FormData();
     formData.append("imagefile", file);
     axios
-      .post("https://flask-production-8563.up.railway.app//predict", formData)
+      .post("https://web-production-de1e.up.railway.app//predict", formData)
       .then(function (response) {
         console.log(response);
         setPrediction(response.data);
@@ -49,7 +49,7 @@ const Predict = () => {
     imageData.append("alabel", prediction === "infected" ? "1" : "0");
     imageData.append("email", email);
     axios
-      .post("https://flask-production-8563.up.railway.app//store-image", imageData)
+      .post("https://web-production-de1e.up.railway.app//store-image", imageData)
       .then(function (response) {
         console.log(response.data.message);
       })
@@ -66,7 +66,7 @@ const Predict = () => {
     imageData.append("plabel", prediction === "infected" ? "1" : "0");
     imageData.append("alabel", prediction === "infected" ? "0" : "1");
     axios
-      .post("https://flask-production-8563.up.railway.app//store-image", imageData)
+      .post("https://web-production-de1e.up.railway.app//store-image", imageData)
       .then(function (response) {
         console.log(response.data.message);
       })
